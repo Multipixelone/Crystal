@@ -26,8 +26,15 @@ puts "Comment in list: #{comment}"
 puts "Location of desktop file: #{filepath}"
 gets
 
-Dir.mkdir("DesktopFiles")
-File.write("DesktopFiles/#{filename}", "[Desktop Entry]")
+Dir.mkdir("#{folder}")
+File.write("#{filepath}", "[Desktop Entry]")
+File.write("#{filepath}", "Name=#{fullname}")
+File.write("#{filepath}", "Comment=#{comment}")
+File.write("#{filepath}", "Exec=#{command}")
+File.write("#{filepath}", "Icon=")
+File.write("#{filepath}", "Terminal=false")
+File.write("#{filepath}", "Type=Application")
+File.write("#{filepath}", "Categories=Game;")
 
 puts "Thanks for using Multipixelone's Shortcut Script!"
 puts "I love you~"
