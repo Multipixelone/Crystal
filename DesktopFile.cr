@@ -19,7 +19,7 @@ puts "Name of desktop file: #{filename}"
 puts "Name of Program in list: #{fullname}"
 puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
-
+gets
 
 File.open("#{filename}", 'a') do |f|
     f << "[Desktop Entry]"
