@@ -32,7 +32,7 @@ gets
 
 Dir.mkdir(iconfolder.to_s)
 
-Dir.mkdir("#{folder}")
+Dir.mkdir("#{outputfolder}")
 File.write("#{filepath}", "[Desktop Entry]")
 File.write("#{filepath}", "Name=#{fullname}")
 File.write("#{filepath}", "Comment=#{comment}")
