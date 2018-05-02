@@ -30,6 +30,8 @@ puts "Location of desktop file: #{filepath}"
 puts "Location of icon: #{icon}"
 gets
 
+Dir.mkdir(iconfolder.to_s)
+
 Dir.mkdir("#{folder}")
 File.write("#{filepath}", "[Desktop Entry]")
 File.write("#{filepath}", "Name=#{fullname}")
