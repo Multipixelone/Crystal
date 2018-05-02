@@ -1,6 +1,7 @@
 # Generate a Linux .desktop file
 # Define default variables
-folder = "DesktopFiles"
+outputfolder = "DesktopFiles"
+iconfolder = "/opt/multipixelone"
 
 puts ".Desktop file script made by Multipixelone"
 
@@ -17,7 +18,7 @@ puts "Type the path to the icon file, to be moved, followed by [ENTER]:"
 icon = gets
 
 filename = "#{simple}.desktop"
-filepath = "#{folder}/#{filename}"
+filepath = "#{outputfolder}/#{filename}"
 
 print "\e[H\e[2J"
 puts "Please make sure these are the right variables:"
@@ -26,6 +27,7 @@ puts "Name of Program in list: #{fullname}"
 puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
 puts "Location of desktop file: #{filepath}"
+puts "Location of icon: #{icon}"
 gets
 
 Dir.mkdir("#{folder}")
