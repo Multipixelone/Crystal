@@ -3,13 +3,13 @@ puts ".Desktop file script made by Multipixelone"
 
 # Ask some questions
 puts "Type a simple name of the application in lowercase, with no spaces, followed by [ENTER]:"
-simple = gets
+simple = gets.strip
 puts "Type the full name of the application, followed by [ENTER]:"
-fullname = gets
+fullname = gets.strip
 puts "Command to execute, followed by [ENTER]:"
-command = gets
+command = gets.strip
 puts "Type the comment of the application, followed by [ENTER]:"
-comment = gets
+comment = gets.strip
 
 filename = "#{simple}.desktop"
 
@@ -19,6 +19,7 @@ puts "Name of desktop file: #{filename}"
 puts "Name of Program in list: #{fullname}"
 puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
+
 
 File.open("#{filename}", 'a') do |f|
     f << "[Desktop Entry]"
