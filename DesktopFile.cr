@@ -13,6 +13,8 @@ puts "Command to execute, followed by [ENTER]:"
 command = gets
 puts "Type the comment of the application, followed by [ENTER]:"
 comment = gets
+puts "Type the path to the icon file, to be moved, followed by [ENTER]:"
+icon = gets
 
 filename = "#{simple}.desktop"
 filepath = "#{folder}/#{filename}"
