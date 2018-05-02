@@ -19,3 +19,17 @@ puts "Name of desktop file: #{filename}"
 puts "Name of Program in list: #{fullname}"
 puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
+
+File.new("#{filename}", 'a') do |f|
+    f << "[Desktop Entry]"
+    f << "Name=#{fullname}"
+    f << "Comment=#{comment}"
+    f << "Exec=#{command}"
+#    f << "Icon="
+    f << "Terminal=false"
+    f << "Type=Application"
+    f << "Categories=Game;"
+end
+
+puts "Thanks for using Multipixelone's Shortcut Script!"
+puts "I love you~"
