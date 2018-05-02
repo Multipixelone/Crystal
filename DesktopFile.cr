@@ -21,7 +21,9 @@ puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
 gets
 
-File.write("#{filename}", "[Desktop Entry]")
+Dir.mkdir("DesktopFiles")
+File.write("DesktopFiles/#{filename}", "[Desktop Entry]")
+
 #File.open("#{filename}", mode = 'a') do |f|
 #    f << "[Desktop Entry]"
 #    f << "Name=#{fullname}"
