@@ -34,7 +34,7 @@ puts "Location of icon: #{icon}"
 gets
 
 # Move icon to proper folder
-Dir.mkdir(iconfolder.to_s) unless File.directory? iconfolder.to_s
+Dir.mkdir_p(iconfolder.to_s) unless File.directory? iconfolder.to_s
 FileUtils.mv(icon.to_s, iconfolder.to_s)
 iconpath = iconfolder.to_s + "/" + icon.to_s
 
