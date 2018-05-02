@@ -13,9 +13,9 @@ comment = gets
 
 filename = "#{simple}.desktop"
 
-puts "Make sure these are the right variables"
-puts filename
-puts simple
-puts fullname
-puts command
-puts comment
+puts "\e[H\e[2J"
+puts "Please make sure these are the right variables:"
+puts "Name of desktop file: #{filename}"
+puts "Name of Program in list: #{fullname}"
+puts "Command to execute: #{command}"
+puts "Comment in list: #{comment}"
