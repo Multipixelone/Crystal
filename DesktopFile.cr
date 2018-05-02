@@ -2,7 +2,7 @@
 # Define default variables, include class
 outputfolder = "DesktopFiles"
 iconfolder = "/opt/multipixelone/icons"
-require File_Utils
+require "file_utils"
 
 puts ".Desktop file script made by Multipixelone"
 
