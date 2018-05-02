@@ -20,7 +20,7 @@ puts "Name of Program in list: #{fullname}"
 puts "Command to execute: #{command}"
 puts "Comment in list: #{comment}"
 
-File.new("#{filename}", 'a') do |f|
+File.open("#{filename}", 'a') do |f|
     f << "[Desktop Entry]"
     f << "Name=#{fullname}"
     f << "Comment=#{comment}"
