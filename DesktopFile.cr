@@ -17,9 +17,11 @@ comment = gets
 puts "Type the path to the icon file, to be moved, followed by [ENTER]:"
 icon = gets
 
+# Define filepath
 filename = "#{simple}.desktop"
 filepath = "#{outputfolder}/#{filename}"
 
+# Verify with user
 print "\e[H\e[2J"
 puts "Please make sure these are the right variables:"
 puts "Name of desktop file: #{filename}"
@@ -30,17 +32,22 @@ puts "Location of desktop file: #{filepath}"
 puts "Location of icon: #{icon}"
 gets
 
+# Move icon to proper folder
 Dir.mkdir(iconfolder.to_s) unless File.directory? iconfolder.to_s
+FileUtils.mv(icon.to_s, iconfolder.to_s)
+iconpath = iconfolder.to_s + "/" + icon.to_s
 
-Dir.mkdir("#{outputfolder}")
+# Write all to file
+Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
 File.write("#{filepath}", "[Desktop Entry]")
 File.write("#{filepath}", "Name=#{fullname}")
 File.write("#{filepath}", "Comment=#{comment}")
 File.write("#{filepath}", "Exec=#{command}")
-File.write("#{filepath}", "Icon=")
+File.write("#{filepath}", "Icon=#{iconpath}")
 File.write("#{filepath}", "Terminal=false")
 File.write("#{filepath}", "Type=Application")
 File.write("#{filepath}", "Categories=Game;")
 
+# Goodbye Message
 puts "Thanks for using Multipixelone's Shortcut Script!"
 puts "I love you~"
