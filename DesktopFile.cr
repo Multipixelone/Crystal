@@ -29,16 +29,5 @@ gets
 Dir.mkdir("DesktopFiles")
 File.write("DesktopFiles/#{filename}", "[Desktop Entry]")
 
-#File.open("#{filename}", mode = 'a') do |f|
-#    f << "[Desktop Entry]"
-#    f << "Name=#{fullname}"
-#    f << "Comment=#{comment}"
-#    f << "Exec=#{command}"
-#    f << "Icon="
-#    f << "Terminal=false"
-#    f << "Type=Application"
-#    f << "Categories=Game;"
-#end
-
 puts "Thanks for using Multipixelone's Shortcut Script!"
 puts "I love you~"
