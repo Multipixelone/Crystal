@@ -1,7 +1,8 @@
 # Generate a Linux .desktop file
-# Define default variables
+# Define default variables, include class
 outputfolder = "DesktopFiles"
 iconfolder = "/opt/multipixelone/icons"
+include(FileUtils)
 
 puts ".Desktop file script made by Multipixelone"
 
