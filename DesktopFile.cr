@@ -1,7 +1,7 @@
 # Generate a Linux .desktop file
 # Define default variables
 outputfolder = "DesktopFiles"
-iconfolder = "/opt/multipixelone"
+iconfolder = "/opt/multipixelone/icons"
 
 puts ".Desktop file script made by Multipixelone"
 
@@ -30,7 +30,7 @@ puts "Location of desktop file: #{filepath}"
 puts "Location of icon: #{icon}"
 gets
 
-Dir.mkdir(iconfolder.to_s)
+Dir.mkdir(iconfolder.to_s) unless File.directory? iconfolder.to_s
 
 Dir.mkdir("#{outputfolder}")
 File.write("#{filepath}", "[Desktop Entry]")
