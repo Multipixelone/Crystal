@@ -11,6 +11,10 @@ command = gets
 puts "Type the comment of the application, followed by [ENTER]:"
 comment = gets
 
+filename = ${simple}.desktop
+
+puts "Make sure these are the right variables"
+puts filename
 puts simple
 puts fullname
 puts command
