@@ -1,0 +1,13 @@
+name: CrystalTesting
+version: 0.1.0
+
+authors:
+  - multipixelone <finn@cnwr.net>
+
+targets:
+  CrystalTesting:
+    main: src/CrystalTesting.cr
+
+crystal: 0.24.2
+
+license: MIT
