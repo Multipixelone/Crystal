@@ -35,7 +35,7 @@ gets
 
 # Move icon to proper folder
 Dir.mkdir_p(iconfolder.to_s) unless File.directory? iconfolder.to_s
-FileUtils.mv(icon.to_s, "#{iconfolder}/")
+FileUtils.mv icon.to_s, "#{iconfolder}/#{icon}"
 iconpath = iconfolder.to_s + "/" + icon.to_s
 
 # Write all to file
