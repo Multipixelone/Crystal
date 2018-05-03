@@ -2,6 +2,7 @@
 # Made with <3 by Multipixelone
 # Define Variables
 require "file_utils"
+require "io"
 buildfolder = "~/BuildTools"
 
 io = IO::Memory.new
