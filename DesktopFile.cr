@@ -45,15 +45,6 @@ File.open("#{filepath}", mode: "w") do |file|
   a.each { |s| file.puts("#{s}\n") }
 end
 
-#File.write("#{filepath}", "[Desktop Entry]")
-#File.write("#{filepath}", "Name=#{fullname}")
-#File.write("#{filepath}", "Comment=#{comment}")
-#File.write("#{filepath}", "Exec=#{command}")
-#File.write("#{filepath}", "Icon=#{iconpath}")
-#File.write("#{filepath}", "Terminal=false")
-#File.write("#{filepath}", "Type=Application")
-#File.write("#{filepath}", "Categories=Game;")
-
 # Goodbye Message
 puts "Thanks for using Multipixelone's Shortcut Script!"
 puts "I love you~"
