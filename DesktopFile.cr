@@ -4,6 +4,8 @@ outputfolder = "DesktopFiles"
 iconfolder = "/opt/multipixelone/icons"
 require "file_utils"
 
+raise TypeError
+
 puts ".Desktop file script made by Multipixelone"
 
 # Ask some questions
