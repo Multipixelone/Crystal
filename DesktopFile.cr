@@ -39,10 +39,12 @@ FileUtils.mv icon.to_s, "#{iconfolder}/#{icon}"
 iconpath = iconfolder.to_s + "/" + icon.to_s
 
 # Write all to file, array used for now
+Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
 a = ["[Desktop Entry]", "Name=#{fullname}", "Comment=#{comment}", "Exec=#{command}", "Icon=#{iconpath}", "Terminal=False", "Type=Application", "Categories=Game;"]
-print a
+File.open("#{filepath}", mode: "w") do |file|
+  a.each { |s| file.puts("#{s}\n") }
+end
 
-#Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
 #File.write("#{filepath}", "[Desktop Entry]")
 #File.write("#{filepath}", "Name=#{fullname}")
 #File.write("#{filepath}", "Comment=#{comment}")
