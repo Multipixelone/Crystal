@@ -1,4 +1,5 @@
 # Generate a Linux .desktop file
+# Made with <3 by Multipixelone
 # Define default variables, include class
 outputfolder = "DesktopFiles"
 iconfolder = "/opt/multipixelone/icons"
