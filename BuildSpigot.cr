@@ -1,7 +1,10 @@
 # Build Latest Spigot Build
 # Made with <3 by Multipixelone
-# Define Variables, get current user
-#currentuser = ENV['USERNAME']
-buildfolder = "#{Dir.home}/Spigot"
+# Define Variables
+require "file_utils"
+buildfolder = "~/Spigot"
 
-Dir.mkdir_p(buildfolder.to_s) unless File.directory? buildfolder.to_s
+# Make build directory, expanding '~' for home
+Dir.mkdir(File.expand_path("#{buildfolder}")) unless File.directory? File.expand_path(buildfolder.to_s)
+FileUtils.cd(File.expand_path("#{buildfolder}"))
+puts "#{Dir.current}"
