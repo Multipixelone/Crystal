@@ -1,2 +1,2 @@
 language: crystal
-script: crystal DesktopFile.cr
+script: crystal build DesktopFile.cr --release
