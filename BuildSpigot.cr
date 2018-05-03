@@ -7,4 +7,5 @@ buildfolder = "~/Spigot"
 # Make build directory, expanding '~' for home
 Dir.mkdir(File.expand_path("#{buildfolder}")) unless File.directory? File.expand_path(buildfolder.to_s)
 FileUtils.cd(File.expand_path("#{buildfolder}"))
-puts "#{Dir.current}"
+puts "Spigot will be downloaded and built into: #{Dir.current}, press [ENTER] to confirm"
+gets
