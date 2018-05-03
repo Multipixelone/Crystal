@@ -38,16 +38,19 @@ Dir.mkdir_p(iconfolder.to_s) unless File.directory? iconfolder.to_s
 FileUtils.mv icon.to_s, "#{iconfolder}/#{icon}"
 iconpath = iconfolder.to_s + "/" + icon.to_s
 
-# Write all to file
-Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
-File.write("#{filepath}", "[Desktop Entry]")
-File.write("#{filepath}", "Name=#{fullname}")
-File.write("#{filepath}", "Comment=#{comment}")
-File.write("#{filepath}", "Exec=#{command}")
-File.write("#{filepath}", "Icon=#{iconpath}")
-File.write("#{filepath}", "Terminal=false")
-File.write("#{filepath}", "Type=Application")
-File.write("#{filepath}", "Categories=Game;")
+# Write all to file, array used for now
+a = ["[Desktop Entry]", "Name=#{fullname}", "Comment=#{comment}", "Exec=#{command}", "Icon=#{iconpath}", "Terminal=False", "Type=Application", "Categories=Game;"]
+print a
+
+#Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
+#File.write("#{filepath}", "[Desktop Entry]")
+#File.write("#{filepath}", "Name=#{fullname}")
+#File.write("#{filepath}", "Comment=#{comment}")
+#File.write("#{filepath}", "Exec=#{command}")
+#File.write("#{filepath}", "Icon=#{iconpath}")
+#File.write("#{filepath}", "Terminal=false")
+#File.write("#{filepath}", "Type=Application")
+#File.write("#{filepath}", "Categories=Game;")
 
 # Goodbye Message
 puts "Thanks for using Multipixelone's Shortcut Script!"
