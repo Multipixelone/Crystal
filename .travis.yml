@@ -1,2 +1,3 @@
 language: crystal
-script: crystal build DesktopFile.cr --release
+script: crystal build src/DesktopFile.cr --release
+script: crystal build src/BuildSpigot.cr --release
