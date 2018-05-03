@@ -1,4 +1,5 @@
 # Generate a Linux .desktop file
+# Made with <3 by Multipixelone
 # Define default variables, include class
 outputfolder = "DesktopFiles"
 iconfolder = "/opt/multipixelone/icons"
@@ -35,19 +36,15 @@ gets
 
 # Move icon to proper folder
 Dir.mkdir_p(iconfolder.to_s) unless File.directory? iconfolder.to_s
-FileUtils.mv(icon.to_s, iconfolder.to_s)
+FileUtils.mv icon.to_s, "#{iconfolder}/#{icon}"
 iconpath = iconfolder.to_s + "/" + icon.to_s
 
-# Write all to file
+# Write all to file, array used for now
 Dir.mkdir("#{outputfolder}") unless File.directory? outputfolder.to_s
-File.write("#{filepath}", "[Desktop Entry]")
-File.write("#{filepath}", "Name=#{fullname}")
-File.write("#{filepath}", "Comment=#{comment}")
-File.write("#{filepath}", "Exec=#{command}")
-File.write("#{filepath}", "Icon=#{iconpath}")
-File.write("#{filepath}", "Terminal=false")
-File.write("#{filepath}", "Type=Application")
-File.write("#{filepath}", "Categories=Game;")
+a = ["[Desktop Entry]", "Name=#{fullname}", "Comment=#{comment}", "Exec=#{command}", "Icon=#{iconpath}", "Terminal=False", "Type=Application", "Categories=Game;"]
+File.open("#{filepath}", mode: "w") do |file|
+  a.each { |s| file.puts("#{s}\n") }
+end
 
 # Goodbye Message
 puts "Thanks for using Multipixelone's Shortcut Script!"
