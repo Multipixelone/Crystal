@@ -10,7 +10,6 @@ buildfolder = "~/BuildTools"
 # Quick check for new info
 def confirm
   print "[Y/N] "
-#  r = io.gets(1).downcase
   r = gets(1).downcase
   exit 0 unless r == "y"
 end
@@ -32,7 +31,7 @@ puts "Installing OpenJDK 9"
 puts "Building Now... Please Wait!"
 system "java -jar BuildTools.jar --rev #{version}"
 outputjar = "spigot-#{version}.jar"
-FileUtils.cp(outputjar.to_s, "#{outputdir}/spigot.jar")
+FileUtils.cp(outputjar.to_s, "#{outputdir}/#{outputjar}")
 puts "Build finished"
 puts "I love you! <3"
 exit 0
