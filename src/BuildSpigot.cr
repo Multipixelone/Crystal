@@ -5,12 +5,12 @@ require "file_utils"
 require "io"
 buildfolder = "~/BuildTools"
 
-$io = IO::Memory.new
+@@io = IO::Memory.new
 
 # Quick check for new info
 def confirm
   print "[Y/N] "
-  r = $io.gets(1).downcase
+  r = @@io.gets(1).downcase
   exit 0 unless r == "y"
 end
 
