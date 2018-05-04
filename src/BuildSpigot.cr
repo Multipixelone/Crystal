@@ -25,6 +25,12 @@ puts "Please type the Minecraft version you would like to build, followed by [EN
 #puts "You may also type 'latest' for the latest version"
 version = gets
 
+# Check for prebuilt .jar
+if File.exists?("#{outputdir}/spigot-#{version}.jar")
+  puts "Jar already exists for version #{version}. Proceed?"
+  gets
+end
+
 # Install Java
 puts "Installing OpenJDK 9"
 `sudo apt-get -y install openjdk-8-jre git`
