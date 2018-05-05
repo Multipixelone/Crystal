@@ -33,6 +33,8 @@ if File.exists?("#{outputdir}/spigot-#{version}.jar") #or File.exists?("#{buildf
 elsif File.exists?("#{buildfolder}/spigot-#{version}.jar")
   puts "Jar already exists for version #{version} in #{buildfolder}. Proceed?"
   gets
+elsif File.exists?("#{Dir.current}/spigot-#{version}.jar")
+  puts "Jar alreadt exists for version #{version} in your current directory. Proceed?"
 end
 
 # Install Java
