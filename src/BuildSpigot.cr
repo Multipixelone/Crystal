@@ -24,6 +24,7 @@ confirm
 sleep(1)
 puts "Please type the Minecraft version you would like to build, followed by [ENTER]:"
 version = gets
+sleep(1)
 #puts "You may also type 'latest' for the latest version"
 #puts "#{buildfolder}/spigot-#{version}.jar"
 
