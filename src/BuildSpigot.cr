@@ -23,8 +23,8 @@ puts "Spigot will be downloaded and built into: #{Dir.current}, correct?"
 confirm
 sleep(1)
 puts "Please type the Minecraft version you would like to build, followed by [ENTER]:"
-#puts "You may also type 'latest' for the latest version"
 version = gets
+#puts "You may also type 'latest' for the latest version"
 #puts "#{buildfolder}/spigot-#{version}.jar"
 
 # Check for prebuilt .jar
