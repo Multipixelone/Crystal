@@ -21,6 +21,7 @@ FileUtils.cd(File.expand_path("#{buildfolder}"))
 puts "Spigot will be downloaded and built into: #{Dir.current}, correct?"
 #gets
 confirm
+sleep(1)
 puts "Please type the Minecraft version you would like to build, followed by [ENTER]:"
 #puts "You may also type 'latest' for the latest version"
 version = gets
