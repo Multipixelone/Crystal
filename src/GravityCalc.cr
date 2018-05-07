@@ -1,7 +1,7 @@
 # Calculate Gravity over time, neglecting air resistance
 # Made with <3 by Multipixelone
 # Define default variables, include class
-gravity = 1000 # Define gravity in cm/s. Real Life would be 9.78033. This assignment can be safely round to 10
+gravity = 1 # Define gravity in cm/s. Real Life would be 9.78033. This assignment can be safely round to 10
 
 # Ask user some questions
 puts "Please remember, all values are in cm/s"
