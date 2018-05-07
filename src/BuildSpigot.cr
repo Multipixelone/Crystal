@@ -40,7 +40,8 @@ end
 puts "Installing OpenJDK 9"
 `sudo apt-get -y install openjdk-8-jre git`
 `wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O BuildTools.jar`
-puts "Building Now... Please Wait!"
+puts "Building Spigot Version #{version}... Please Wait!"
+sleep(1.5s)
 system "java -jar BuildTools.jar --rev #{version}"
 outputjar = "spigot-#{version}.jar"
 FileUtils.cp(outputjar.to_s, "#{outputdir}/#{outputjar}")
