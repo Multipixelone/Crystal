@@ -12,7 +12,7 @@ max = gets
 
 # Run some calculations
 halfgrav = (gravity / 2)
-calculations = (max / interval)
+#calculations = (max / interval)
 
 puts halfgrav * 1**2
 puts halfgrav * 2**2
