@@ -21,7 +21,3 @@ TODO: Write development instructions here
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
-
-## Contributors
-
-- [[your-github-name]](https://github.com/[your-github-name]) multipixelone - creator, maintainer
