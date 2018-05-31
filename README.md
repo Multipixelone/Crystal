@@ -1,6 +1,3 @@
-# CrystalTesting
-
-TODO: Write a description here
 
 ## Installation
 
